@@ -1,0 +1,111 @@
+openapi: 3.0.3
+info:
+  title: DRF Ecommerce API
+  version: 1.0.0
+  description: DRF Ecommerce API For Django Ninja
+paths:
+  /api/brand/:
+    get:
+      operationId: api_brand_retrieve
+      description: A simple ViewSet for listing or Brand users.
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/brand/{id}/:
+    get:
+      operationId: api_brand_retrieve_2
+      description: A simple ViewSet for listing or Brand users.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/categories/:
+    get:
+      operationId: api_categories_retrieve
+      description: A simple ViewSet for listing or Categories users.
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/categories/{id}/:
+    get:
+      operationId: api_categories_retrieve_2
+      description: A simple ViewSet for listing or Categories users.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/product/:
+    get:
+      operationId: api_product_retrieve
+      description: A simple ViewSet for listing or Product users.
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+  /api/product/{id}/:
+    get:
+      operationId: api_product_retrieve_2
+      description: A simple ViewSet for listing or Product users.
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          description: No response body
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
